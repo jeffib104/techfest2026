@@ -15,6 +15,22 @@ body {
     color: var(--text-main);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Apply to the home page specifically to avoid cluttering sub-pages */
+.home-bg {
+    /* The linear-gradient acts as a dark overlay so your text stays 'Genius' clear */
+    background: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)),
+                url('/static/TechFestHomePage.png');
+
+    background-size: cover;      /* Ensures the image fills the whole screen */
+    background-position: center; /* Keeps the focus in the middle */
+    background-attachment: fixed; /* Optional: Creates a cool 'parallax' effect when scrolling */
+    min-height: 100vh;           /* Ensures it covers the full viewport height */
+    color: var(--text-white);
 }
 
 .date-badge { color: var(--accent); font-weight: bold; margin-bottom: 15px; }
@@ -23,7 +39,9 @@ body {
 
 .highlight { color: var(--accent); }
 
-.description { color: var(--text-gray); max-width: 600px; margin: 30px auto;  }
+.highlight1 { color: #8B949E}
+
+.description { color: #F0F6FC; max-width: 600px; margin: 30px auto; }
 
 /* NAVIGATION */
 nav {
@@ -49,37 +67,47 @@ nav a:hover { color: var(--accent); }
 .container { max-width: 1100px; margin: auto; padding: 2rem; }
 
 .hero {
-    height: 70vh;
+    min-height: 80vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 100px 20px;
+    position: relative;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 25px;
     margin-top: 2rem;
+    align-items: stretch;
 }
 
 /* CARDS */
 .card {
     background: var(--card-bg);
     border: 5px solid var(--border);
-    padding: 2rem;
+    padding: 25px;
     border-radius: 12px;
+    display:flex;
+    flex-direction: column;
+    height: 50%;
+    min-height: 80px;
+    justify-content: space-between;
     transition: transform 0.3s ease;
 }
 
 .info-card{
-    background: var(--card-bg);
+    background: rgba(13, 17, 23, 0.7);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--border);
     padding: 0.5 rem;
     border-radius: 2px;
     transition: transform 0.3s ease;
-
+    position: relative;
+    z-index: 10; /* Keeps it above the background image */
 }
 
 .card:hover {
@@ -108,8 +136,11 @@ nav a:hover { color: var(--accent); }
 
 .btn:hover { opacity: 0.8; }
 
-.footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-color); color: var(--text-gray); }
+.footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-color); color: #E6EDF3; }
 
+.desc{
+    color: white;
+    }
 .page-title {
     color: var(--accent);
     margin-bottom: 40px;
@@ -188,4 +219,59 @@ nav a:hover { color: var(--accent); }
     border-color: var(--accent); /* Highlight the location card */
     font-size: 0.9rem;
     line-height: 1.5
+}
+
+.btn-event{
+    text-decoration: none;
+    color: inherit; /* Keeps your text colors exactly as they were */
+    display: block; /* Makes the link fill the whole space */
+}
+
+/* event details style */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.rules-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border-left: 4px solid var(--accent);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.stat-card small {
+    color: var(--accent);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+}
+
+.btn-register {
+    display: block;
+    text-align: center;
+    background: var(--accent);
+    color: var(--bg-dark);
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .detail-grid { grid-template-columns: 1fr; }
 }

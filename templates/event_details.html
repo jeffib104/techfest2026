@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ event.name }} | Tecosta 26</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="dark-theme">
+
+    <nav class="navbar">
+        <div class="logo">TECOSTA 2026</div>
+        <ul class="nav-links">
+            <li><a href="/events">← All Events</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header class="detail-header">
+            <h1 class="page-title">> {{ event.name.upper() }}</h1>
+            <p class="summary-text">{{ event.description }}</p>
+        </header>
+
+        <div class="detail-grid">
+            <div class="main-content">
+                <section class="rules-section">
+                    <h2 class="accent-title">General Rules</h2>
+                    <ul class="rules-list">
+                        {% for rule in event.rules %}
+                            <li>{{ rule }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+
+                {% if event.round_structure %}
+                <section class="rules-section">
+                    <h2 class="accent-title">Round Structure</h2>
+                    <ul class="rules-list">
+                        {% for step in event.round_structure %}
+                            <li>{{ step }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                {% endif %}
+
+                {% if event.software %}
+                <section class="rules-section">
+                    <h2 class="accent-title">Software & Tools</h2>
+                    <ul class="rules-list">
+                        {% for tool in event.software %}
+                            <li>{{ tool }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                {% endif %}
+            </div>
+
+            <aside class="sidebar">
+                <div class="stat-card">
+                    <small>EVENT DATE/TIME</small>
+                    <p>{{ event.time }}</p>
+                </div>
+                <div class="stat-card">
+                    <small>PRIZE INFO</small>
+                    <p>{{ event.prize }}</p>
+                </div>
+                <div class="stat-card">
+                    <small>ELIGIBILITY</small>
+                    <p>{{ event.requirements }}</p>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        &copy; 2026 BSc Computer Science | Mar Thoma College, Ayur
+    </footer>
+
+</body>
+</html>

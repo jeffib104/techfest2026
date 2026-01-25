@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | Tech Fest 26</title>
+    <title>Events | Tecosta 26</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
     <nav>
-        <div class="logo">TECH FEST 2026</div>
+        <div class="logo">TECOSTA 2026</div>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/events">Events</a></li>
@@ -19,53 +19,73 @@
     </nav>
 
     <div class="container">
-        <h1 style="color: var(--accent); margin-bottom: 10px;">Scheduled Activities</h1>
+        <h1 style="color: var(--accent); margin-bottom: 10px;">Events</h1>
         <p style="color: var(--text-dim);">Feb 4th & 5th • Mar Thoma College of Science and Technology, Ayur</p>
 
         <div class="grid">
-            <div class="card">
-                <h3 style="margin-bottom: 10px;">Attack on Bug</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim);">
-                    Hunt for logic and syntax errors in Python.
-                </p>
+            <a href="{{ url_for('event_detail', event_id='debugging') }}" class="btn-event">
+                <div class="card">
+                    <h3 style="margin-bottom: 10px;">Attack on Bug</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Hunt for logic and syntax errors in Python.
+                    </p>
+                </div>
+            </a>
 
-            </div>
+            <a href="{{ url_for('event_detail', event_id='web-design') }}" class="btn-event">
+                <div class="card">
+                    <h3 style="margin-bottom: 10px;">Website Designing</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Rapidly prototype a landing page. Pure CSS and HTML focus.
+                    </p>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3 style="margin-bottom: 10px;">Website Designing</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim);">
-                    Rapidly prototype a landing page. Pure CSS and HTML focus.
-                </p>
+            <a href="{{ url_for('event_detail', event_id='blind-coding') }}" class="btn-event">
+                <div class="card">
+                    <h3 style="margin-bottom: 10px;">Blind Coding</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Try to code with your eyes closed!
+                    </p>
+                </div>
+            </a>
 
-            </div>
+            <a href="{{ url_for('event_detail', event_id='logo-designing') }}" class="btn-event">
+                <div class="card">
+                    <h3 style="margin-bottom: 10px;">Logo Designing</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Bring out your creativity with extraordinary logo designing skills!
+                    </p>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3 style="margin-bottom: 10px;">Blind Coding</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim);">
-                    Try to code with your eyes closed!
-                </p>
-            </div>
+            <a href="{{ url_for('event_detail', event_id='technical-quiz') }}" class="btn-event">
+                <div class="card">
+                    <h3 style="margin-bottom: 10px;">Technical Quiz</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Challenge your knowledge by taking this quiz
+                    </p>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3 style="margin-bottom: 10px;">Logo Designing</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim);">
-                    Bring out your creativity with extraordinary logo designing skills!
-                </p>
-            </div>
+            <a href="{{ url_for('event_detail', event_id='rapid-type') }}" class="btn-event">
+                <div class="card">
+                    <h3 style="margin-bottom: 10px;">Rapid Type</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Compete to be the fastest typer!
+                    </p>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3 style="margin-bottom: 10px;">Technical Quiz</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim);">
-                    Challenge your knowledge by taking this quiz
-                </p>
-            </div>
+            <a href="{{ url_for('event_detail', event_id='treasure-hunt') }}" class="btn-event">
+                <div class="card">
+                    <h3 style="margin-bottom: 10px;">Treasure Hunt</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">
+                        Look for clues and find your treasure...
+                    </p>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3 style="margin-bottom: 10px;">And other fun stuff</h3>
-                <p style="font-size: 0.9rem; color: var(--text-dim);">
-                    Online gaming, Treasure Hunt, Type Master and much more!
-                </p>
-            </div>
 
             </div>
     </div>
