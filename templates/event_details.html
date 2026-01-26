@@ -53,6 +53,29 @@
                     </ul>
                 </section>
                 {% endif %}
+
+                {% if event.photography_rules %}
+                <section class="rules-section">
+                    <h2 class="accent-title">Photography Rules</h2>
+                    <ul class="rules-list">
+                        {% for rule in event.photography_rules %}
+                            <li>{{ rule }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                {% endif %}
+
+                {% if event.reel_rules %}
+                <section class="rules-section">
+                    <h2 class="accent-title">Reel Rules</h2>
+                    <ul class="rules-list">
+                        {% for reels in event.reel_rules %}
+                            <li>{{ reels }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                {% endif %}
+
             </div>
 
             <aside class="sidebar">

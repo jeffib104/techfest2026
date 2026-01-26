@@ -132,7 +132,30 @@ EVENTS_DATA = {
         "prize": "Web Design Champion",
         "time": "Feb 4-5 | 60 min",
         "requirements": "Individual participation | HTML/CSS/JS"
-    }
+    },
+    "photography-reel": {
+        "name": "Spot Photography & Reel",
+        "time": "Photography: 15 min | Reel: 45 min",
+        "description": "Capture the essence of the fest through your lens. Show your creativity in photography and short-form storytelling.",
+        "rules": [
+            "Only mobile phones are allowed",
+            "No extra requirements or equipment allowed",
+            "Submissions are allowed only at the designated time"
+        ],
+        "photography_rules": [
+            "Photographs must be original and captured by the participant",
+            "Only unedited photographs are allowed (no filters, cropping, or enhancements)",
+            "Submit in original resolution; only one entry per participant",
+            "Any edited or plagiarized entry will be disqualified"
+        ],
+        "reel_rules": [
+            "The reel must be captured by the participant using a mobile phone",
+            "You may add filters, effects, sound effects, etc., to make the reel perfect",
+            "Only one reel submission per participant is allowed"
+        ],
+        "prize": "TBD",
+        "requirements": "Mobile Phone Only"
+    },
 }
 
 
