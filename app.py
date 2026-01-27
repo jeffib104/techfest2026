@@ -22,7 +22,7 @@ EVENTS_DATA = {
             "Final Round: 20 points.",
             "Winners selected based on highest total score out of 60."
         ],
-        "prize": "Winner based on total points and completion time",
+        "prize": "Winner based on total points and completion time 1st Prize - 500rs",
         "time": "Feb 4-5 | 3 Rounds (20 min each)",
         "requirements": "Individual participation | Python"
     },
@@ -43,7 +43,7 @@ EVENTS_DATA = {
             "Only qualified teams move to next rounds.",
             "Tie-breaker round conducted in case of a tie."
         ],
-        "prize": "Excellence in Tech Quiz",
+        "prize": "1st Prize - 800rs, 2nd Prize - 400rs, 3rd Prize - 200rs",
         "time": "4th February | 60 min",
         "requirements": "Team of 2 members"
     },
@@ -63,7 +63,7 @@ EVENTS_DATA = {
             "Final format: PNG/JPEG (Transparent background preferred).",
             "Must submit a brief description of the logo concept."
         ],
-        "prize": "Winning Logo Design Award",
+        "prize": "1st - 500rs",
         "time": "Feb 4-5 | 45 min",
         "requirements": "Individual participation | Mobile provided"
     },
@@ -80,7 +80,7 @@ EVENTS_DATA = {
         "software": [
             "Platform: Monkey Type software."
         ],
-        "prize": "Type Master Title",
+        "prize": "1st - Rs 500",
         "time": "Feb 4-5 | Single Round",
         "requirements": "Keyboard typing speed and accuracy"
     },
@@ -94,7 +94,7 @@ EVENTS_DATA = {
             "Internet resources and pre-written libraries are prohibited.",
             "Judged on correctness, efficiency, and adherence to constraints."
         ],
-        "prize": "Blind Coding Excellence Award",
+        "prize": "1st Prize - Rs 500",
         "time": "Feb 4-5 | Standard Time Limits",
         "requirements": "Languages: Python or C"
     },
@@ -129,7 +129,7 @@ EVENTS_DATA = {
             "Must run properly on a standard web browser.",
             "Must include: Home page, About section, and Navigation menu."
         ],
-        "prize": "Web Design Champion",
+        "prize": "1st Prize - 1000rs, 2nd Prize - 500rs",
         "time": "Feb 4-5 | 60 min",
         "requirements": "Individual participation | HTML/CSS/JS"
     },
@@ -153,7 +153,7 @@ EVENTS_DATA = {
             "You may add filters, effects, sound effects, etc., to make the reel perfect",
             "Only one reel submission per participant is allowed"
         ],
-        "prize": "TBD",
+        "prize": "Photography 1st - 300rs, Reels 1st - 500rs",
         "requirements": "Mobile Phone Only"
     },
 }
@@ -173,8 +173,11 @@ def help():
     c_email = os.environ.get('COORD_EMAIL', 'contact@techfest26.com')
     c_phone = os.environ.get('COORD_PHONE', 'Phone number')
     c_phone1 = os.environ.get('COORD_PHONE1', 'Phone number 1')
+    c_phone2 = os.environ.get('COORD_PHONE2', 'Phone number 2')
+    c_phone3 = os.environ.get('COORD_PHONE3', 'Phone number 3')
+    c_phone4 = os.environ.get('COORD_PHONE4', 'Phone number 4')
 
-    return render_template('help.html', coord_email=c_email, coord_phone=c_phone, coord_phone1=c_phone1)
+    return render_template('help.html', coord_email=c_email, coord_phone=c_phone, coord_phone1=c_phone1, coord_phone2=c_phone2, coord_phone3=c_phone3, coord_phone4=c_phone4)
 
 @app.route('/events/<event_id>')
 def event_detail(event_id):

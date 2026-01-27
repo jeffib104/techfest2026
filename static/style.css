@@ -172,7 +172,7 @@ nav a:hover { color: var(--accent); }
 .contact-card {
     background: var(--card-bg);
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 2px;
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
