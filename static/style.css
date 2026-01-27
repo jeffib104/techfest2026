@@ -28,9 +28,10 @@ body {
 
     background-size: cover;      /* Ensures the image fills the whole screen */
     background-position: center; /* Keeps the focus in the middle */
-    background-attachment: fixed; /* Optional: Creates a cool 'parallax' effect when scrolling */
+    background-attachment: scroll; /* Optional: Creates a cool 'parallax' effect when scrolling */
     min-height: 100vh;           /* Ensures it covers the full viewport height */
     color: var(--text-white);
+    z-index:-9
 }
 
 .date-badge { color: var(--accent); font-weight: bold; margin-bottom: 15px; }
@@ -51,7 +52,7 @@ nav {
     padding: 1.5rem 10%;
     background: rgba(10, 14, 20, 0.9);
     border-bottom: 1px solid var(--border);
-    position: sticky;
+    position: relative;
     top: 0;
 }
 
@@ -106,7 +107,7 @@ nav a:hover { color: var(--accent); }
     padding: 0.5 rem;
     border-radius: 2px;
     transition: transform 0.3s ease;
-    position: relative;
+    position: static;
     z-index: 10; /* Keeps it above the background image */
 }
 
