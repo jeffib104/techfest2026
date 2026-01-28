@@ -1,11 +1,12 @@
 /* BASELINE STYLES - REUSABLE */
 :root {
-    --bg-dark: #0a0e14;
-    --card-bg: #161b22;
-    --accent: #00d2ff; /* Tech Blue */
-    --text-main: #e6edf3;
+    --bg-dark: #0D0D0B;
+    --card-bg: rgba(30, 26, 22, 0.8);
+    --accent: #C0A080; /* Tech Blue */
+    --text-main: #E5E0D8;
     --text-dim: #8b949e;
     --border: #30363d;
+    --bg-image:;
 }
 
 * { margin: 0; padding: 0; box-box: border-box; }
@@ -21,17 +22,15 @@ body {
 }
 
 /* Apply to the home page specifically to avoid cluttering sub-pages */
-.home-bg {
-    /* The linear-gradient acts as a dark overlay so your text stays 'Genius' clear */
-    background: linear-gradient(rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 0.8)),
-                url('/static/TechFestHomePage.png');
-
-    background-size: cover;      /* Ensures the image fills the whole screen */
-    background-position: center; /* Keeps the focus in the middle */
-    background-attachment: scroll; /* Optional: Creates a cool 'parallax' effect when scrolling */
-    min-height: 100vh;           /* Ensures it covers the full viewport height */
-    color: var(--text-white);
-    z-index:-9
+/* Optimized Global Background Class */
+.dynamic-bg {
+    /* The fallback image is a dark solid color if the variable fails */
+    background: linear-gradient(rgba(13, 13, 11, 0.85), rgba(13, 13, 11, 0.85)),
+                var(--bg-image, none);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 .date-badge { color: var(--accent); font-weight: bold; margin-bottom: 15px; }
@@ -50,7 +49,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 10%;
-    background: rgba(10, 14, 20, 0.9);
+    background: #0D0D0B;
     border-bottom: 1px solid var(--border);
     position: relative;
     top: 0;
@@ -68,7 +67,7 @@ nav a:hover { color: var(--accent); }
 .container { max-width: 1100px; margin: auto; padding: 2rem; }
 
 .hero {
-    min-height: 80vh;
+    min-height: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
